@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+
+
+.logo {
+    height: 200px;
+    margin-bottom: 5px;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.401));
+}
+
+
+:root {
+    --size-default: 22px;
+    --size-sm: 16px;
+    --color-green: #58dd93;
+    --color-black: #000;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --glowColor {
+    syntax: "<color>";
+    initial-value: #dd5858;
+}
+
+@keyframes rotate {
+    0% {
+        --angle: 0deg;
+        --glowColor: rgba(231, 42, 42, 0.787);
+    }
+
+    100% {
+        --angle: 360deg;
+        --glowColor: rgba(231, 42, 42, 0.787);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--color-black) 100%), radial-gradient(circle at 50% -50%, #335f4b 0%, var(--color-black) 100%); */
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: none;
+    background: none;
+    position: relative;
+    padding: 1px;
+    margin-bottom: 5%;
+    text-decoration: none;
+    transition: all 0.18s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+
+.contato:after,
+.contato:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: calc(100px + 1.5px);
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: conic-gradient(from var(--angle) at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 33%, var(--glowColor) 50%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+    animation: rotate 2s infinite linear;
+}
+
+.contato:before {
+    animation: rotate 2s infinite linear;
+    filter: blur(20px);
+}
+
+.contato .contatoInner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 100px;
+    color: rgba(231, 42, 42, 0.787);
+    font-weight: bold;
+    font-size: 22px;
+    z-index: 1;
+    transition: all 0.18s ease;
+    background: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(40px);
+    backface-visibility: hidden;
+padding-bottom: 13px;
+padding-top: 13px;
+}
+
+.contato:hover .contatoInner {
+    background: rgba(221, 88, 88, 0.1);
+    color: #f3acac;
+}
+
+.contato:active {
+    transform: scale(0.95);
+}
+
+button {
+    color: white;
+    background-color: rgb(144, 3, 3);
+    border-radius: 3.9px;
+    border: none;
+    width: 200px;
+    text-transform: uppercase;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 36px;
+}
+
+.contato {
+    border-radius: 3.9px;
+    border: none;
+    width: 270px;
+    text-transform: uppercase;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 36px;
+ }
+
+ .mariobrothers {
+    height: 500px;
+    filter: drop-shadow(1px 0 25px rgba(144, 3, 3, 0.644));
+
+    border-radius: 80% 41%;
+    border: 5px inset rgba(250, 49, 49, 0.755);
+    backdrop-filter: 1000px;
+}
+
+body {
+    height: 100vh;
+}
+
+.text01 {
+    width: 50%;
+    margin-right: 105px;
+}
+
+.caixa-video {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+
+}
+
+.mascara-video {
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.556) 0%, rgba(0, 0, 0, 1) 100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.caixa-mãe {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 120px;
+    padding: 100px;
+    height: 100vh;
+position: fixed;
+
+}
+
+p {
+    font-size: 20px;
+    color: white;
+
+}
+
+.botao-zap img {
+    cursor: pointer;
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+position: fixed;
+}
+
+
+
+.header img {
+    height: 70px;
+}
+
+.header a {
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header a:hover {
+    filter: drop-shadow(0px 0px 3px rgb(144, 3, 3));
+    transition: 0.5s ease-in;
+    color: rgb(144, 3, 3);
+    font-size: 23px;
+}
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 33%;
+    left: -300px;
+    padding: 20px;
+    border-radius: 22px;
+    gap: 15px;
+    transition: left 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+input {
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: rgb(8, 189, 8);
+}
+
+textarea {
+    width: 270px;
+    height: 48px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: rgb(8, 189, 8);
+    padding: 5px;
+    height: 100px;
+}
+
+.formulario-fale-conosco button {
+    margin-top: 13px;
+    margin-left: 34.5px;
+    border-radius: 11px;
+}
+
+/* 
+inicial
+top: 33%
+left: -300px
+
+final
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%);
+*/
+
+.mascara-formulario {
+     background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0,0,0,0.7833508403361344) 52%);
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+   visibility: hidden;
+    transition: visibility 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
